@@ -14,9 +14,8 @@ Screenshot eller link.
 
 ## Built With
 
-- React
-- Node.js
-- MongoDB
+- Android Studio
+- Kotlin
 
 ## Installation
 
