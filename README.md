@@ -27,38 +27,75 @@ npm run dev
 
 ## Architecture 
 
+# Projektstruktur (MVVM)
+
+```text
+
 com.example.app
+
 │
+
 ├── view
+
 │   │
+
 │   ├── home
+
 │   │   └── HomeScreen.kt
+
 │   │
+
 │   ├── profile
+
 │   │   └── ProfileScreen.kt
+
 │   │
+
 │   └── settings
+
 │       └── SettingsScreen.kt
+
 │
+
 ├── viewmodel
+
 │   │
+
 │   ├── HomeViewModel.kt
+
 │   ├── ProfileViewModel.kt
+
 │   └── SettingsViewModel.kt
+
 │
+
 ├── model
+
 │   │
+
 │   ├── User.kt
+
 │   ├── Product.kt
+
 │   │
+
 │   └── repository
+
 │       ├── UserRepository.kt
+
 │       └── ProductRepository.kt
+
 │
+
 ├── navigation
+
 │   └── AppNavigation.kt
+
 │
+
 └── MainActivity.kt
+
+```
 
 ## Usage
 
