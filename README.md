@@ -131,9 +131,9 @@ Når en udvikler arbejder på en ny funktion, fejlrettelse eller ændring, laves
 
    Her kan man sammenligne to branches og oprette en pull request.
 
-   Sørg for at vælge **base: main** og **compare: oliver**.
+   Sørg for at vælge **base: main** og **compare: branch-navn**.
 
-   Det betyder, at ændringerne fra `oliver` skal ind i `main`.
+   Det betyder f.eks., at ændringerne fra `oliver` skal ind i `main`.
 
    <img width="550" alt="Vælg base main og compare oliver" src="https://github.com/user-attachments/assets/d8820d5f-29cc-457c-898d-3f13641be15f" />
 
