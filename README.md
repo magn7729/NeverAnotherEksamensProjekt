@@ -1,3 +1,4 @@
+<img width="1311" height="506" alt="Skærmbillede 2026-05-06 kl  11 13 33" src="https://github.com/user-attachments/assets/c18294da-84a7-49de-8e50-dedeed26d3c0" />
 # NeverAnother
 
 Kort beskrivelse af projektet.
@@ -128,9 +129,19 @@ Når en udvikler arbejder på en ny funktion, fejlrettelse eller ændring, laves
 
 6. Push branchen til GitHub
 7. Opret en pull request til main
-8. Få pull requesten gennemgået
-9. Løs eventuelle konflikter
+
+<img width="1421" height="512" alt="Skærmbillede 2026-05-06 kl  11 14 02" src="https://github.com/user-attachments/assets/8a9ab008-907f-4a69-a814-25f8724773dc" />
+
+
+<img width="933" height="525" alt="Skærmbillede 2026-05-06 kl  11 14 31" src="https://github.com/user-attachments/assets/5f9a9e0d-b39c-42d6-8411-f2de39687b90" />
+
+9. Få pull requesten gennemgået
 10. Merge pull requesten ind i main
+<img width="895" height="172" alt="Skærmbillede 2026-05-06 kl  11 20 09" src="https://github.com/user-attachments/assets/4a9cf211-22cb-4672-98eb-cea5452e95ce" />
+
+11. Update project inde på main
+<img width="637" height="187" alt="Skærmbillede 2026-05-06 kl  11 22 49" src="https://github.com/user-attachments/assets/6c7c9767-a865-43a6-992a-197f48d71eff" />
+
 
 ## Authors
 
