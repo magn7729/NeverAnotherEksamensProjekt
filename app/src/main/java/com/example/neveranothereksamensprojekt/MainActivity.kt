@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                                                // automatisk får appens design og styling
                                                // Her defineres appens farver, typografi og generelle design.
                                                // Det gør at hele appen får samme visuelle stil når man feks laver Buttons og Text
-                                               // Når vi skriver "NeverAnotherEksamensProjektTheme" så bruger appen det theme som er defineret i jeres Theme.kt fil inde i ui.theme.
+                                               // Når vi skriver "NeverAnotherEksamensProjektTheme" så bruger appen det theme som er defineret i vores Theme.kt fil inde i ui.theme.
 
                 val navController = rememberNavController() // Opretter den controller, der styrer navigation
 
