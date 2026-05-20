@@ -1,46 +1,183 @@
 package com.example.neveranothereksamensprojekt.view.screens
 
+import android.R.attr.width
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-
-// SKAL SLETTES DET ER UDELUKKENDE TIL TEST AF NAVIGATION
+import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontVariation.width
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
+import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
 
 @Composable
 fun Introscreen(
     onNextClick: () -> Unit
 ) {
-    // Column placerer elementerne lodret under hinanden
+
+    // Hele screenens layout
     Column(
         modifier = Modifier
-            // Gør at layoutet fylder hele skærmen
             .fillMaxSize()
-
-            // Giver luft rundt om indholdet
+            .background(BeigeBackground)
             .padding(24.dp),
 
-        // Centrerer indholdet vandret
-        horizontalAlignment = Alignment.CenterHorizontally,
-
-        // Centrerer indholdet lodret
-        verticalArrangement = Arrangement.Center
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Simpel tekst, så vi kan se hvilken screen vi er på
-        Text(text = "Intro Screen")
 
-        // Simpel knap, der sender brugeren videre til næste screen
-        Button(
-            onClick = onNextClick,
-            modifier = Modifier.padding(top = 24.dp)
+        // Logo / Titel
+        Text(
+            text = "NEVERANOTHER",
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier.padding(top = 40.dp)
+        )
+
+        Spacer(modifier = Modifier.height(40.dp))
+
+        // Overskrift
+        Text(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 60.dp),
+            text = "Før du går i gang",
+            style = MaterialTheme.typography.bodyLarge.copy(
+                fontSize = 30.sp
+            )
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        // Undertekst
+        Text(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 60.dp),
+            text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
+            style = MaterialTheme.typography.bodyLarge
+
+        )
+
+        Spacer(modifier = Modifier.height(60.dp))
+
+// Boks 1
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 60.dp),
+
+            shape = RoundedCornerShape(16.dp),
+
+            colors = CardDefaults.cardColors(
+                containerColor = PureWhite
+            )
+
         ) {
-            Text(text = "Inden du går i gang")
+            Row(
+                modifier = Modifier.padding(24.dp)
+            ) {
+                Text(
+                    text = "1",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+
+                Spacer(modifier = Modifier.padding(12.dp))
+
+                Text(
+                    text = "Find et målebånd",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
         }
+
+        Spacer(modifier = Modifier.height(60.dp))
+
+// Boks 2
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 60.dp),
+
+            shape = RoundedCornerShape(16.dp),
+
+            colors = CardDefaults.cardColors(
+                containerColor = PureWhite
+            )
+
+        ) {
+            Row(
+                modifier = Modifier.padding(24.dp)
+            ) {
+                Text(
+                    text = "2",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+                Spacer(modifier = Modifier.padding(12.dp))
+
+                Text(
+                    text = "Tag din bedst siddende BH på",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(60.dp))
+
+// Boks 3
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 60.dp),
+
+            shape = RoundedCornerShape(16.dp),
+
+            colors = CardDefaults.cardColors(
+                containerColor = PureWhite
+            )
+
+        ) {
+            Row(
+                modifier = Modifier.padding(24.dp)
+            ) {
+                Text(
+                    text = "3",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+                Spacer(modifier = Modifier.padding(12.dp))
+
+                Text(
+                    text = "Vi guider dig igennem måleprocessen",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+        }
+        Spacer(modifier = Modifier.weight(1f))
+
+        // Vores knap fra vores component "Button.kt"
+        EveryClickButton(
+            text = "Start måling",
+            onClick = onNextClick,
+
+            modifier = Modifier
+                .width(200.dp)
+                .height(65.dp)
+        )
     }
 }
