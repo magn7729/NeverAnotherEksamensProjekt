@@ -62,7 +62,7 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             )
         }
     // Denne route viser CheckoutScreen
-    // Når brugeren trykker videre, navigeres der til Confirmation-Screen
+    // Når brugeren trykker videre, navigeres der til Confirmation-Screen.
         composable(Screen.Checkout.route) {
             CheckoutScreen(
                 onNextClick = {

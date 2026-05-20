@@ -17,7 +17,7 @@ import com.example.neveranothereksamensprojekt.ui.theme.NeverAnotherEksamensProj
 
 // MainActivity er appens startpunkt
 class MainActivity : ComponentActivity() {
-    // onCreate bliver kaldt når activity'en bliver oprettet
+    // onCreate bliver kaldt når activity'en bliver oprettet.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
