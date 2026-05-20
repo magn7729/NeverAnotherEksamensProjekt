@@ -2,10 +2,14 @@ package com.example.neveranothereksamensprojekt.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// 🟠 Primary brand color (knapper)
+val OrangePrimary = Color(0xFFFF5F00)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// 🟤 Screen background (beige)
+val BeigeBackground = Color(0xFFF2EBDB)
+
+// 🤍 Highlight / card / subtle background
+val BeigeHighlight = Color(0xFFFEFDFB)
+
+// ⚪ White (popups / clean screens)
+val PureWhite = Color(0xFFFFFFFF)
