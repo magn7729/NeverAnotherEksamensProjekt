@@ -15,14 +15,21 @@ import androidx.navigation.compose.rememberNavController
 import com.example.neveranothereksamensprojekt.navigation.AppNavHost
 import com.example.neveranothereksamensprojekt.ui.theme.NeverAnotherEksamensProjektTheme
 
+// MainActivity er appens startpunkt
 class MainActivity : ComponentActivity() {
+    // onCreate bliver kaldt når activity'en bliver oprettet
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NeverAnotherEksamensProjektTheme {
-                // Opretter den controller, der styrer navigation
-                val navController = rememberNavController()
+            NeverAnotherEksamensProjektTheme { // Dette bliver vist fordi MainActivity er appens startpunkt.
+                                               // Det betyder at alt UI som bliver vist i "NeverAnotherEksamensProjektTheme"
+                                               // automatisk får appens design og styling
+                                               // Her defineres appens farver, typografi og generelle design.
+                                               // Det gør at hele appen får samme visuelle stil når man feks laver Buttons og Text
+                                               // Når vi skriver "NeverAnotherEksamensProjektTheme" så bruger appen det theme som er defineret i jeres Theme.kt fil inde i ui.theme.
+
+                val navController = rememberNavController() // Opretter den controller, der styrer navigation
 
                 // Viser vores NavHost, som bestemmer hvilken screen der skal vises
                 AppNavHost(navController = navController)
