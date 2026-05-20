@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.neveranothereksamensprojekt.navigation.AppNavHost
 import com.example.neveranothereksamensprojekt.ui.theme.NeverAnotherEksamensProjektTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +21,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NeverAnotherEksamensProjektTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                // Opretter den controller, der styrer navigation
+                val navController = rememberNavController()
+
+                // Viser vores NavHost, som bestemmer hvilken screen der skal vises
+                AppNavHost(navController = navController)
+
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NeverAnotherEksamensProjektTheme {
-        Greeting("Android")
-    }
-}
