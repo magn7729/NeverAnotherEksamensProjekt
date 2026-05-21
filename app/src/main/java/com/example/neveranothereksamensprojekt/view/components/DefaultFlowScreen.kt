@@ -32,15 +32,23 @@ fun DefaultFlowScreen(
 
         // Alt unikt indhold fra den enkelte screen bliver placeret her.
 
-        /*
+
         AppLogo(                    //Standardplacering af logo
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .padding(top = 88.dp)
-                .width(260.dp)
+                .padding(top = 80.dp)
+                .width(320.dp)
         )
 
-         */
+        if (showBackButton && onBackClick != null) {
+            BackButton(
+                onClick = onBackClick,
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(start = 24.dp, top = 48.dp)
+            )
+        }
+
 
         EveryClickButton(          //Standardplacering af knap i bunden
             text = buttonText,
