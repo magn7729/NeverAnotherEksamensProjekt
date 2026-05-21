@@ -55,18 +55,6 @@ fun Homescreen(
             contentScale = ContentScale.Fit
         )
 
-        /*
-    Her er der gjort plads til en tilbageknap senere.
-            På HomeScreen skal den sandsynligvis ikke vises,
-            fordi det er første side i flowet.
-            BackButton(
-                onClick = onBackClick,
-                modifier = Modifier
-                    .align(Alignment.TopStart)
-                    .padding(start = 24.dp, top = 48.dp)
-            )
-     */
-
         Column(
             modifier = Modifier
                 .align(Alignment.BottomStart)
