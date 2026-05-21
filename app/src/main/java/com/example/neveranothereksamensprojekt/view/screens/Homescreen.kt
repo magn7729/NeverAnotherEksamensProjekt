@@ -55,20 +55,6 @@ fun Homescreen(
             contentScale = ContentScale.Fit
         )
 
-        /*
-    Her er der gjort plads til en tilbageknap senere.
-            På HomeScreen skal den sandsynligvis ikke vises,
-            fordi det er første side i flowet.
-            Når I laver en BackButton-component senere,
-            kan den fx placeres sådan her:
-            BackButton(
-                onClick = onBackClick,
-                modifier = Modifier
-                    .align(Alignment.TopStart)
-                    .padding(start = 24.dp, top = 48.dp)
-            )
-     */
-
         Column(
             modifier = Modifier
                 .align(Alignment.BottomStart)
@@ -107,7 +93,6 @@ fun Homescreen(
             EveryClickButton(           // Bruger Button.kt fra components
                 text = "Kom i gang",
                 onClick = onNextClick,
-
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
                     .width(200.dp)

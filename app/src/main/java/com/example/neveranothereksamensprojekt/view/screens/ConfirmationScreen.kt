@@ -32,6 +32,7 @@ fun ConfirmationScreen(
         // Centrerer indholdet lodret
         verticalArrangement = Arrangement.Center
     ) {
+
         // Simpel tekst, så vi kan se hvilken screen vi er på
         Text(text = "Confirmation screen")
 
