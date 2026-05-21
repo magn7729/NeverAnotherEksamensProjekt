@@ -31,7 +31,8 @@ fun MeasurementsScreen(
 ) {
     DefaultFlowScreen(
         buttonText = "Fortsæt",
-        onButtonClick = onNextClick
+        onButtonClick = onNextClick,
+        onBackClick = onBackClick
     ) {
 
         Column(
@@ -82,15 +83,8 @@ fun MeasurementsScreen(
                         Text(text = "Inden du går i gang")
                     }
                 }
-                BackButton(
-                    onClick = onBackClick,
-                    modifier = Modifier
-                        .align(Alignment.TopStart)
-                        .padding(start = 24.dp, top = 48.dp)
-                )
+
             }
-
-
         }
     }
 }
