@@ -5,6 +5,7 @@ import android.R.attr.width
 import android.R.id.content
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,10 +30,13 @@ import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontVariation.width
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
+import com.example.neveranothereksamensprojekt.ui.theme.BeigeHighlight
+import com.example.neveranothereksamensprojekt.ui.theme.OrangePrimary
 import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
 import com.example.neveranothereksamensprojekt.view.components.BackButton
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
@@ -57,19 +61,33 @@ fun Introscreen(
                     top = 170.dp
                 )
         ) {
-
-            Text(
-                text = "Før du går i gang",
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 30.sp
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ){
+                Image(
+                    painter = painterResource(id = R.drawable.flereflueben),
+                    contentDescription = "Flueben",
+                    modifier = Modifier
+                        .width(40.dp)
+                        .height(40.dp)
                 )
-            )
+
+                Spacer(modifier = Modifier.width(24.dp))
+
+                Text(
+                    text = "Før du går i gang",
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        fontSize = 30.sp
+                    )
+                )
+            }
 
             Spacer(modifier = Modifier.height(12.dp))
 
             Text(
                 text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(start = 66.dp)
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -79,20 +97,38 @@ fun Introscreen(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.container),
-                    contentDescription = "Container 1",
+
+                Box(
                     modifier = Modifier
                         .width(55.dp)
                         .height(55.dp)
-                )
+                        .background(
+                            color = OrangePrimary,
+                            shape = RoundedCornerShape(32.dp)
+                        ),
+                    contentAlignment = Alignment.Center
+                ){
+                    Text(
+                        text = "1",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = PureWhite
+                    )
+                }
+
+                Spacer(modifier = Modifier.width(24.dp))
 
                 Card(
                     modifier = Modifier
+                        .fillMaxWidth()
+                        .border(
+                            width = 0.1.dp,
+                            color = Color.Black,
+                            shape = RoundedCornerShape(16.dp)
+                        )
                         .weight(1f)
                         .height(100.dp),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = PureWhite)
+                    colors = CardDefaults.cardColors(containerColor = BeigeHighlight)
                 ) {
                     Row(
                         modifier = Modifier
@@ -100,35 +136,80 @@ fun Introscreen(
                             .padding(24.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
+
+                        Image(
+                            painter = painterResource(id = R.drawable.maalebaand),
+                            contentDescription = "Målebånd",
+                            modifier = Modifier
+                                .width(40.dp)
+                                .height(40.dp)
+                        )
+
+                        Spacer(modifier = Modifier.width(10.dp))
+
                         Text(
                             text = "Find et målebånd",
-                            style = MaterialTheme.typography.bodyLarge
+                            style = MaterialTheme.typography.bodyLarge.copy(
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 17.sp),
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Box(
+                modifier = Modifier
+                    .padding(start = 26.dp)
+                    .width(4.dp)
+                    .height(60.dp)
+                    .background(
+                        color = OrangePrimary,
+                        shape = RoundedCornerShape(16.dp)
+                    )
+            )
+
+            Spacer(modifier = Modifier.height(0.dp))
+
+
+
 
             // Boks 2
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.container2),
-                    contentDescription = "Container 2",
+
+                Box(
                     modifier = Modifier
                         .width(55.dp)
                         .height(55.dp)
-                )
+                        .background(
+                            color = OrangePrimary,
+                            shape = RoundedCornerShape(32.dp)
+                        ),
+                    contentAlignment = Alignment.Center
+                ){
+                    Text(
+                        text = "2",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = PureWhite
+                    )
+                }
+
+                Spacer(modifier = Modifier.width(24.dp))
 
                 Card(
                     modifier = Modifier
+                        .fillMaxWidth()
+                        .border(
+                            width = 0.1.dp,
+                            color = Color.Black,
+                            shape = RoundedCornerShape(16.dp)
+                        )
                         .weight(1f)
                         .height(100.dp),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = PureWhite)
+                    colors = CardDefaults.cardColors(containerColor = BeigeHighlight)
                 ) {
                     Row(
                         modifier = Modifier
@@ -136,35 +217,80 @@ fun Introscreen(
                             .padding(24.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
+
+                        Image(
+                            painter = painterResource(id = R.drawable.tshirt),
+                            contentDescription = "Tshirt",
+                            modifier = Modifier
+                                .width(40.dp)
+                                .height(40.dp)
+                        )
+
+                        Spacer(modifier = Modifier.width(10.dp))
+
                         Text(
-                            text = "Tag din bedst siddende BH på",
-                            style = MaterialTheme.typography.bodyLarge
+                            text = "Tag din bedstsiddende BH på",
+                            style = MaterialTheme.typography.bodyLarge.copy(
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 17.sp),
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Box(
+                modifier = Modifier
+                    .padding(start = 26.dp)
+                    .width(4.dp)
+                    .height(60.dp)
+                    .background(
+                        color = OrangePrimary,
+                        shape = RoundedCornerShape(16.dp)
+                    )
+            )
+
+            Spacer(modifier = Modifier.height(0.dp))
+
+            Spacer(modifier = Modifier.height(0.dp))
+
+
 
             // Boks 3
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.container3),
-                    contentDescription = "Container 3",
+                Box(
                     modifier = Modifier
                         .width(55.dp)
                         .height(55.dp)
-                )
+                        .background(
+                            color = OrangePrimary,
+                            shape = RoundedCornerShape(32.dp)
+                        ),
+                    contentAlignment = Alignment.Center
+                ){
+                    Text(
+                        text = "3",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = PureWhite
+                    )
+                }
+
+                Spacer(modifier = Modifier.width(24.dp))
 
                 Card(
                     modifier = Modifier
+                        .fillMaxWidth()
+                        .border(
+                            width = 0.1.dp,
+                            color = Color.Black,
+                            shape = RoundedCornerShape(16.dp)
+                        )
                         .weight(1f)
                         .height(100.dp),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = PureWhite)
+                    colors = CardDefaults.cardColors(containerColor = BeigeHighlight)
                 ) {
                     Row(
                         modifier = Modifier
@@ -172,9 +298,22 @@ fun Introscreen(
                             .padding(24.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
+
+                        Image(
+                            painter = painterResource(id = R.drawable.flueben),
+                            contentDescription = "Flueben",
+                            modifier = Modifier
+                                .width(40.dp)
+                                .height(40.dp)
+                        )
+
+                        Spacer(modifier = Modifier.width(10.dp))
+
                         Text(
-                            text = "Skræddersyet og klar",
-                            style = MaterialTheme.typography.bodyLarge
+                            text = "Vi guider dig igennem måleprocessen",
+                            style = MaterialTheme.typography.bodyLarge.copy(
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 17.sp),
                         )
                     }
                 }
