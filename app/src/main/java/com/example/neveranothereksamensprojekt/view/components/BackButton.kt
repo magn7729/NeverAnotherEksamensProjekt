@@ -27,7 +27,7 @@ fun BackButton(
     ) {
         Text(
             text = "←",
-            fontSize = 24.sp,
+            fontSize = 26.sp,
             color = Color.Black
         )
     }

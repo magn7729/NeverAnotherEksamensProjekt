@@ -81,6 +81,7 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
                 },
                 onBackClick = {
                     navController.popBackStack()
+
                 }
             )
         }

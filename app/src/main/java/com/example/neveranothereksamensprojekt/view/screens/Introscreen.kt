@@ -39,153 +39,153 @@ fun Introscreen(
         modifier = Modifier.fillMaxSize()
     ) {
 
-    // Hele screenens layout
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(BeigeBackground)
-            .padding(24.dp),
-
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-
-        // Logo / Titel
-        Text(
-            text = "NEVERANOTHER",
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(top = 40.dp)
-        )
-
-        Spacer(modifier = Modifier.height(40.dp))
-
-        // Overskrift
-        Text(
+        // Hele screenens layout
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp),
-            text = "Før du går i gang",
-            style = MaterialTheme.typography.bodyLarge.copy(
-                fontSize = 30.sp
+                .fillMaxSize()
+                .background(BeigeBackground)
+                .padding(24.dp),
+
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+            // Logo / Titel
+            Text(
+                text = "NEVERANOTHER",
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(top = 40.dp)
             )
-        )
 
-        Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(40.dp))
 
-        // Undertekst
-        Text(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp),
-            text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
-            style = MaterialTheme.typography.bodyLarge
+            // Overskrift
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 60.dp),
+                text = "Før du går i gang",
+                style = MaterialTheme.typography.bodyLarge.copy(
+                    fontSize = 30.sp
+                )
+            )
 
-        )
+            Spacer(modifier = Modifier.height(12.dp))
 
-        Spacer(modifier = Modifier.height(60.dp))
+            // Undertekst
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 60.dp),
+                text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
+                style = MaterialTheme.typography.bodyLarge
+
+            )
+
+            Spacer(modifier = Modifier.height(60.dp))
 
 // Boks 1
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp),
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 60.dp),
 
-            shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(16.dp),
 
-            colors = CardDefaults.cardColors(
-                containerColor = PureWhite
-            )
+                colors = CardDefaults.cardColors(
+                    containerColor = PureWhite
+                )
 
-        ) {
-            Row(
-                modifier = Modifier.padding(24.dp)
             ) {
-                Text(
-                    text = "1",
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                Row(
+                    modifier = Modifier.padding(24.dp)
+                ) {
+                    Text(
+                        text = "1",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
 
-                Spacer(modifier = Modifier.padding(12.dp))
+                    Spacer(modifier = Modifier.padding(12.dp))
 
-                Text(
-                    text = "Find et målebånd",
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                    Text(
+                        text = "Find et målebånd",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
-        }
 
-        Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(60.dp))
 
 // Boks 2
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp),
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 60.dp),
 
-            shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(16.dp),
 
-            colors = CardDefaults.cardColors(
-                containerColor = PureWhite
-            )
+                colors = CardDefaults.cardColors(
+                    containerColor = PureWhite
+                )
 
-        ) {
-            Row(
-                modifier = Modifier.padding(24.dp)
             ) {
-                Text(
-                    text = "2",
-                    style = MaterialTheme.typography.bodyLarge
-                )
-                Spacer(modifier = Modifier.padding(12.dp))
+                Row(
+                    modifier = Modifier.padding(24.dp)
+                ) {
+                    Text(
+                        text = "2",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Spacer(modifier = Modifier.padding(12.dp))
 
-                Text(
-                    text = "Tag din bedst siddende BH på",
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                    Text(
+                        text = "Tag din bedst siddende BH på",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
-        }
 
-        Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(60.dp))
 
 // Boks 3
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp),
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 60.dp),
 
-            shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(16.dp),
 
-            colors = CardDefaults.cardColors(
-                containerColor = PureWhite
-            )
+                colors = CardDefaults.cardColors(
+                    containerColor = PureWhite
+                )
 
-        ) {
-            Row(
-                modifier = Modifier.padding(24.dp)
             ) {
-                Text(
-                    text = "3",
-                    style = MaterialTheme.typography.bodyLarge
-                )
-                Spacer(modifier = Modifier.padding(12.dp))
+                Row(
+                    modifier = Modifier.padding(24.dp)
+                ) {
+                    Text(
+                        text = "3",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Spacer(modifier = Modifier.padding(12.dp))
 
-                Text(
-                    text = "Vi guider dig igennem måleprocessen",
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                    Text(
+                        text = "Vi guider dig igennem måleprocessen",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
+            Spacer(modifier = Modifier.weight(1f))
+
+            // Vores knap fra vores component "Button.kt"
+            EveryClickButton(
+                text = "Start måling",
+                onClick = onNextClick,
+
+                modifier = Modifier
+                    .width(200.dp)
+                    .height(65.dp)
+            )
         }
-        Spacer(modifier = Modifier.weight(1f))
-
-        // Vores knap fra vores component "Button.kt"
-        EveryClickButton(
-            text = "Start måling",
-            onClick = onNextClick,
-
-            modifier = Modifier
-                .width(200.dp)
-                .height(65.dp)
-        )
-    }
 
         BackButton(
             onClick = onBackClick,
@@ -193,6 +193,6 @@ fun Introscreen(
                 .align(Alignment.TopStart)
                 .padding(start = 24.dp, top = 48.dp)
         )
-}
+    }
 }
 

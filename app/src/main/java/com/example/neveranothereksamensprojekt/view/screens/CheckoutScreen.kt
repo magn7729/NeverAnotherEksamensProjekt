@@ -56,6 +56,7 @@ fun CheckoutScreen(
             modifier = Modifier
                 .align(Alignment.TopStart)
                 .padding(start = 24.dp, top = 48.dp)
+
         )
     }
 

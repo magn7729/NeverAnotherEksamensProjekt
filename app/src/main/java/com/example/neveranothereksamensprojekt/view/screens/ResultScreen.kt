@@ -42,6 +42,7 @@ fun ResultScreen(
             // Centrerer indholdet lodret
             verticalArrangement = Arrangement.Center
         ) {
+
             // Simpel tekst, så vi kan se hvilken screen vi er på
             Text(text = "Result screen")
 
@@ -59,6 +60,7 @@ fun ResultScreen(
             modifier = Modifier
                 .align(Alignment.TopStart)
                 .padding(start = 24.dp, top = 48.dp)
+
         )
     }
 }
