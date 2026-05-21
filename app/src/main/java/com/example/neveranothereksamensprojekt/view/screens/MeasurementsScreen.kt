@@ -45,51 +45,52 @@ fun MeasurementsScreen(
 
         ) {
             Text(
-               text = "Indtast dine mål",
+                text = "Indtast dine mål",
                 style = MaterialTheme.typography.titleLarge.copy(
                     fontSize = 46.sp,
                 ),
                 color = Color.Black
             )
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ) {
-
-        // Column placerer elementerne lodret under hinanden
-        Column(
-            modifier = Modifier
-                // Gør at layoutet fylder hele skærmen
-                .fillMaxSize()
-
-                // Giver luft rundt om indholdet
-                .padding(24.dp),
-
-            // Centrerer indholdet vandret
-            horizontalAlignment = Alignment.CenterHorizontally,
-
-            // Centrerer indholdet lodret
-            verticalArrangement = Arrangement.Center
-        ) {
-
-            // Simpel tekst, så vi kan se hvilken screen vi er på
-            Text(text = "Measurement Screen")
-
-            // Simpel knap, der sender brugeren videre til næste screen
-            Button(
-                onClick = onNextClick,
-                modifier = Modifier.padding(top = 24.dp)
+            Box(
+                modifier = Modifier.fillMaxSize()
             ) {
-                Text(text = "Inden du går i gang")
+
+                // Column placerer elementerne lodret under hinanden
+                Column(
+                    modifier = Modifier
+                        // Gør at layoutet fylder hele skærmen
+                        .fillMaxSize()
+
+                        // Giver luft rundt om indholdet
+                        .padding(24.dp),
+
+                    // Centrerer indholdet vandret
+                    horizontalAlignment = Alignment.CenterHorizontally,
+
+                    // Centrerer indholdet lodret
+                    verticalArrangement = Arrangement.Center
+                ) {
+
+                    // Simpel tekst, så vi kan se hvilken screen vi er på
+                    Text(text = "Measurement Screen")
+
+                    // Simpel knap, der sender brugeren videre til næste screen
+                    Button(
+                        onClick = onNextClick,
+                        modifier = Modifier.padding(top = 24.dp)
+                    ) {
+                        Text(text = "Inden du går i gang")
+                    }
+                }
+                BackButton(
+                    onClick = onBackClick,
+                    modifier = Modifier
+                        .align(Alignment.TopStart)
+                        .padding(start = 24.dp, top = 48.dp)
+                )
             }
+
+
         }
-        BackButton(
-            onClick = onBackClick,
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(start = 24.dp, top = 48.dp)
-        )
-    }
-
-
     }
 }
