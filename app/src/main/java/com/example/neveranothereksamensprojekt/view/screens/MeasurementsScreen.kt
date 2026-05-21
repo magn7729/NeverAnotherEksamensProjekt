@@ -60,9 +60,7 @@ fun MeasurementsScreen(
 
             // Sliders skal tilføjes her
 
-            Box(
-                modifier = Modifier.fillMaxSize()
-            ) {
+
 
 
         }
@@ -111,3 +109,4 @@ fun MeasurementsScreen(
 
     }
 }
+
