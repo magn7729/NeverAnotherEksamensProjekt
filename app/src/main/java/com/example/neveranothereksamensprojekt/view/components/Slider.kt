@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun MeasurementSlider() {
     var sliderPosition by remember { mutableFloatStateOf(100f) }
-    var textValue by remember { mutableStateOf("100") }
+
 
     Column(modifier = Modifier.padding(16.dp)) {
 
@@ -62,12 +62,15 @@ fun MeasurementSlider() {
                     .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
                 BasicTextField(
-                    value = textValue,
+                    value = sliderPosition.roundToInt().toString(),
                     onValueChange = { input ->
-                        textValue = input
-                        input.toFloatOrNull()?.let {
-                            if (it in 0f..200f) sliderPosition = it
+                        input.toFloatOrNull()?.let {  newValue ->
+                            if (newValue in 0f..200f){
+                                sliderPosition = newValue
+                            }
+
                         }
+
                         //Det her gør at slideren ændrer sig når man skriver tallet i tekstboxen
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -98,6 +101,5 @@ fun MeasurementSlider() {
                 )
             }
         )
-        Text(text = sliderPosition.toString())
     }
 }
