@@ -58,6 +58,12 @@ fun MeasurementsScreen(
                 color = Color.Black
             )
 
+            // Sliders skal tilføjes her
+
+            Box(
+                modifier = Modifier.fillMaxSize()
+            ) {
+
 
         }
 
