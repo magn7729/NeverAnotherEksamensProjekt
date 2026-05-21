@@ -1,6 +1,7 @@
 package com.example.neveranothereksamensprojekt.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -9,14 +10,18 @@ import com.example.neveranothereksamensprojekt.view.screens.Homescreen
 import com.example.neveranothereksamensprojekt.view.screens.Introscreen
 import com.example.neveranothereksamensprojekt.view.screens.MeasurementsScreen
 import com.example.neveranothereksamensprojekt.view.screens.ResultScreen
+import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
 // AppNavHost styrer navigationen mellem appens forskellige screens
 // Den bestemmer hvilke sider der skal findes i appen og hvilken side der skal vises først
 @Composable
-fun AppNavHost( // NavControlleren kommer fra MainActivity
-                // Den bruges til at navigere mellem de forskellige screens
+fun AppNavHost(
+    // NavControlleren kommer fra MainActivity
+    // Den bruges til at navigere mellem de forskellige screens
     navController: NavHostController
+
 ) {
+    val braViewModel: BraViewModel = viewModel()
 
     // NavHost fungerer som en container for alle appens navigation-routes
     // startDestination bestemmer hvilken screen appen starter på --> Home
@@ -52,6 +57,7 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
     // Når brugeren trykker videre, navigeres der til Result-screen
         composable(Screen.Measurements.route) {
             MeasurementsScreen(
+                viewModel = braViewModel,
                 onNextClick = {
                     navController.navigate(Screen.Result.route)
                 },

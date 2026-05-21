@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -17,15 +18,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.neveranothereksamensprojekt.navigation.Screen
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 import com.example.neveranothereksamensprojekt.view.components.BackButton
+import com.example.neveranothereksamensprojekt.view.components.MeasurementSlider
+import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
 
 @Composable
 fun MeasurementsScreen(
+    viewModel: BraViewModel,
     onNextClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
@@ -48,15 +53,55 @@ fun MeasurementsScreen(
             Text(
                 text = "Indtast dine mål",
                 style = MaterialTheme.typography.titleLarge.copy(
-                    fontSize = 46.sp,
+                    fontSize = 36.sp,
                 ),
                 color = Color.Black
             )
-            Box(
-                modifier = Modifier.fillMaxSize()
-            ) {
 
-            }
+
         }
+
+        Column(
+            modifier = Modifier.padding(top = 250.dp)
+        ) {
+
+            MeasurementSlider(
+                label = "Øvre Omkreds",
+                sliderPosition = viewModel.upperCircumference,
+                onSliderPositionChange = { newValue ->
+                    viewModel.updateUpperCircumference(newValue)
+
+                }
+            )
+
+            MeasurementSlider(
+                label = "Nedre Omkreds",
+                sliderPosition = viewModel.lowerCircumference,
+                onSliderPositionChange = { newValue ->
+                    viewModel.updateLowerCircumference(newValue)
+
+                }
+            )
+
+            MeasurementSlider(
+                label = "Bryst højde",
+                sliderPosition = viewModel.breastWidth,
+                onSliderPositionChange = { newValue ->
+                    viewModel.updateBreastWidth(newValue)
+
+                }
+            )
+
+            MeasurementSlider(
+                label = "Nedre Omkreds",
+                sliderPosition = viewModel.breastHeight,
+                onSliderPositionChange = { newValue ->
+                    viewModel.updateBreastHeight(newValue)
+
+                }
+            )
+        }
+
+
     }
 }

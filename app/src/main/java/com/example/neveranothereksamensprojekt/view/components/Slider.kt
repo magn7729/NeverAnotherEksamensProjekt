@@ -37,11 +37,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true, backgroundColor = 0xFFF2EBDB)
 @Composable
-fun MeasurementSlider() {
-    var sliderPosition by remember { mutableFloatStateOf(100f) }
+fun MeasurementSlider(
+    label: String,
+    sliderPosition: Float,
+    onSliderPositionChange: (Float) -> Unit
 
+) {
 
     Column(modifier = Modifier.padding(16.dp)) {
 
@@ -66,7 +68,7 @@ fun MeasurementSlider() {
                     onValueChange = { input ->
                         input.toFloatOrNull()?.let {  newValue ->
                             if (newValue in 0f..200f){
-                                sliderPosition = newValue
+                                onSliderPositionChange(newValue)
                             }
 
                         }
@@ -85,7 +87,8 @@ fun MeasurementSlider() {
 
         Slider(
             value = sliderPosition,
-            onValueChange = { sliderPosition = it.roundToInt().toFloat() },
+            onValueChange = { onSliderPositionChange (it.roundToInt().toFloat())
+                            },
             valueRange = 0f..200f,
             colors = SliderDefaults.colors(
                 thumbColor = PureWhite,
