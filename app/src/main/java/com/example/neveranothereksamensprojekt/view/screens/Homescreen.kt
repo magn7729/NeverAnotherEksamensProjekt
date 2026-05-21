@@ -93,7 +93,6 @@ fun Homescreen(
             EveryClickButton(           // Bruger Button.kt fra components
                 text = "Kom i gang",
                 onClick = onNextClick,
-
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
                     .width(200.dp)
