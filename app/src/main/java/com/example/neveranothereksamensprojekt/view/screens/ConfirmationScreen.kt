@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ConfirmationScreen(
-    onNextClick: () -> Unit
+    onBackClick: () -> Unit
 ) {
     // Column placerer elementerne lodret under hinanden
     Column(
@@ -38,7 +38,7 @@ fun ConfirmationScreen(
 
         // Simpel knap, der sender brugeren videre til næste screen
         Button(
-            onClick = onNextClick,
+            onClick = onBackClick,
             modifier = Modifier.padding(top = 24.dp)
         ) {
             Text(text = "Kom i gang")

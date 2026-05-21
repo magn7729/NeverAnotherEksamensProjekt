@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -22,6 +23,7 @@ import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 import com.example.neveranothereksamensprojekt.view.components.BackButton
+import com.example.neveranothereksamensprojekt.view.components.MeasurementSlider
 
 
 @Composable
@@ -52,6 +54,9 @@ fun MeasurementsScreen(
                 ),
                 color = Color.Black
             )
+
+            // Sliders skal tilføjes her
+
             Box(
                 modifier = Modifier.fillMaxSize()
             ) {

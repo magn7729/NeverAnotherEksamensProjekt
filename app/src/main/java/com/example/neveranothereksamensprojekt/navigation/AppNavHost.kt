@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.neveranothereksamensprojekt.view.screens.CheckoutScreen
+import com.example.neveranothereksamensprojekt.view.screens.ConfirmationScreen
 import com.example.neveranothereksamensprojekt.view.screens.Homescreen
 import com.example.neveranothereksamensprojekt.view.screens.Introscreen
 import com.example.neveranothereksamensprojekt.view.screens.MeasurementsScreen
@@ -25,8 +26,8 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
         startDestination = Screen.Home.route
     ) {
 
-    // Denne route viser Homescreen
-    // Når der trykkes videre navigeres der til Intro-screen
+        // Denne route viser Homescreen
+        // Når der trykkes videre navigeres der til Intro-screen
         composable(Screen.Home.route) {
             Homescreen(
                 onNextClick = {
@@ -34,8 +35,8 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
                 }
             )
         }
-    // Denne route viser Introscreen
-    // Når brugeren trykker videre, navigeres der til Measurement-screen
+        // Denne route viser Introscreen
+        // Når brugeren trykker videre, navigeres der til Measurement-screen
         composable(Screen.Intro.route) {
             Introscreen(
                 onNextClick = {
@@ -48,8 +49,8 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             )
 
         }
-    // Denne route viser MeasurementsScreen
-    // Når brugeren trykker videre, navigeres der til Result-screen
+        // Denne route viser MeasurementsScreen
+        // Når brugeren trykker videre, navigeres der til Result-screen
         composable(Screen.Measurements.route) {
             MeasurementsScreen(
                 onNextClick = {
@@ -60,8 +61,8 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
                 }
             )
         }
-    // Denne route viser ResultScreen
-    // Når brugere trykker videre, navigeres der til Checkout-Screen
+        // Denne route viser ResultScreen
+        // Når brugere trykker videre, navigeres der til Checkout-Screen
         composable(Screen.Result.route) {
             ResultScreen(
                 onNextClick = {
@@ -72,8 +73,8 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
                 }
             )
         }
-    // Denne route viser CheckoutScreen
-    // Når brugeren trykker videre, navigeres der til Confirmation-Screen.
+        // Denne route viser CheckoutScreen
+        // Når brugeren trykker videre, navigeres der til Confirmation-Screen.
         composable(Screen.Checkout.route) {
             CheckoutScreen(
                 onNextClick = {
@@ -86,5 +87,13 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             )
         }
 
+        composable(Screen.Confirmation.route) {
+            ConfirmationScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
+
+        }
     }
 }
