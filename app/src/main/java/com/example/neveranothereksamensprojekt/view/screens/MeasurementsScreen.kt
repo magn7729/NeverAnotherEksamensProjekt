@@ -56,34 +56,6 @@ fun MeasurementsScreen(
                 modifier = Modifier.fillMaxSize()
             ) {
 
-                // Column placerer elementerne lodret under hinanden
-                Column(
-                    modifier = Modifier
-                        // Gør at layoutet fylder hele skærmen
-                        .fillMaxSize()
-
-                        // Giver luft rundt om indholdet
-                        .padding(24.dp),
-
-                    // Centrerer indholdet vandret
-                    horizontalAlignment = Alignment.CenterHorizontally,
-
-                    // Centrerer indholdet lodret
-                    verticalArrangement = Arrangement.Center
-                ) {
-
-                    // Simpel tekst, så vi kan se hvilken screen vi er på
-                    Text(text = "Measurement Screen")
-
-                    // Simpel knap, der sender brugeren videre til næste screen
-                    Button(
-                        onClick = onNextClick,
-                        modifier = Modifier.padding(top = 24.dp)
-                    ) {
-                        Text(text = "Inden du går i gang")
-                    }
-                }
-
             }
         }
     }

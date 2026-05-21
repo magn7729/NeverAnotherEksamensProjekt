@@ -1,6 +1,8 @@
 package com.example.neveranothereksamensprojekt.view.screens
 
+import android.R.attr.content
 import android.R.attr.width
+import android.R.id.content
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -47,26 +49,16 @@ fun Introscreen(
     ) {
         Column(
             modifier = Modifier
+                .align(Alignment.TopCenter)
                 .fillMaxWidth()
                 .padding(
-                    start = 24.dp,
-                    end = 24.dp,
-                    top = 40.dp
-                ),
-            horizontalAlignment = Alignment.CenterHorizontally
+                    start = 40.dp,
+                    end = 16.dp,
+                    top = 170.dp
+                )
         ) {
 
             Text(
-                text = "NEVERANOTHER",
-                style = MaterialTheme.typography.bodyLarge
-            )
-
-            Spacer(modifier = Modifier.height(40.dp))
-
-            Text(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 60.dp),
                 text = "Før du går i gang",
                 style = MaterialTheme.typography.bodyLarge.copy(
                     fontSize = 30.sp
@@ -76,14 +68,11 @@ fun Introscreen(
             Spacer(modifier = Modifier.height(12.dp))
 
             Text(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 60.dp),
                 text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
                 style = MaterialTheme.typography.bodyLarge
             )
 
-            Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             // Boks 1
             Row(
