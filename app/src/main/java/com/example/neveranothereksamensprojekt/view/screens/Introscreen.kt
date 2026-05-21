@@ -3,6 +3,7 @@ package com.example.neveranothereksamensprojekt.view.screens
 import android.R.attr.width
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -27,11 +28,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
+import com.example.neveranothereksamensprojekt.view.components.BackButton
 
 @Composable
 fun Introscreen(
-    onNextClick: () -> Unit
+    onNextClick: () -> Unit,
+    onBackClick: () -> Unit
 ) {
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ) {
 
     // Hele screenens layout
     Column(
@@ -180,4 +186,13 @@ fun Introscreen(
                 .height(65.dp)
         )
     }
+
+        BackButton(
+            onClick = onBackClick,
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(start = 24.dp, top = 48.dp)
+        )
 }
+}
+

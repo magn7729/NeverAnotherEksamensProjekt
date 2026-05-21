@@ -59,8 +59,6 @@ fun Homescreen(
     Her er der gjort plads til en tilbageknap senere.
             På HomeScreen skal den sandsynligvis ikke vises,
             fordi det er første side i flowet.
-            Når I laver en BackButton-component senere,
-            kan den fx placeres sådan her:
             BackButton(
                 onClick = onBackClick,
                 modifier = Modifier
