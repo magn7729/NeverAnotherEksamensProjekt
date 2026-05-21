@@ -33,36 +33,36 @@ import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
 import com.example.neveranothereksamensprojekt.view.components.BackButton
+import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 
 @Composable
 fun Introscreen(
     onNextClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
-    Box(
-        modifier = Modifier.fillMaxSize()
+    DefaultFlowScreen(
+        buttonText = "Start måling",
+        onButtonClick = onNextClick,
+        onBackClick = onBackClick
     ) {
-
-        // Hele screenens layout
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .background(BeigeBackground)
-                .padding(24.dp),
-
+                .fillMaxWidth()
+                .padding(
+                    start = 24.dp,
+                    end = 24.dp,
+                    top = 40.dp
+                ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            // Logo / Titel
             Text(
                 text = "NEVERANOTHER",
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(top = 40.dp)
+                style = MaterialTheme.typography.bodyLarge
             )
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            // Overskrift
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -75,334 +75,121 @@ fun Introscreen(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Undertekst
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 60.dp),
                 text = "Vi guider dig hele vejen fra målebånd til færdig pasform.",
                 style = MaterialTheme.typography.bodyLarge
-
             )
 
             Spacer(modifier = Modifier.height(60.dp))
 
-        // Boks 1
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) { /*
-            Image(
-                painter = painterResource(id = R.drawable.),
-                contentDescription = "Container 1",
-                modifier = Modifier
-                    .width(55.dp)
-                    .height(55.dp)
-                    .offset(x = (-40).dp, y = 30.dp)
-            )
-*/
-            Spacer(modifier = Modifier.width(0.dp))
-
-            Card(
-                modifier = Modifier
-                    .weight(1f)
-                    .height(100.dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = PureWhite
-                )
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(24.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Find et målebånd",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(40.dp))
-
-// Boks 2
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            /*
-            Image(
-                painter = painterResource(id = R.drawable.container2),
-                contentDescription = "Container 2",
-                modifier = Modifier
-                    .width(55.dp)
-                    .height(55.dp)
-                    .offset(x = (-40).dp, y = 30.dp)
-            )
-*/
-            Spacer(modifier = Modifier.width(0.dp))
-
-            Card(
-                modifier = Modifier
-                    .weight(1f)
-                    .height(100.dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = PureWhite
-                )
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(24.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Tag din bedst siddende BH på",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(40.dp))
-
-// Boks 3
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            /*
-            Image(
-                painter = painterResource(id = R.drawable.container3),
-                contentDescription = "Container 3",
-                modifier = Modifier
-                    .width(55.dp)
-                    .height(55.dp)
-
-                    .offset(x = (-10).dp, y = 30.dp)
-            )
-*/
-            Spacer(modifier = Modifier.width(0.dp))
-
-            Card(
-                modifier = Modifier
-                    .width(500.dp)
-                    .height(100.dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = PureWhite
-                )
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(24.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Skræddersyet og klar",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                }
-            }
-        }
-    }
-}
-
-        /*
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ){
-            Image(
-                painter = painterResource(id = R.drawable.container),
-                contentDescription = "Container 1",
-                modifier = Modifier
-                    .width(165.dp)
-                    .height(165.dp)
-
-                    .offset(x = (-165).dp)
-                    .offset(y = 70.dp)
-            )
-        }
-
-
-        // Boks 1
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp)
-                .width(100.dp)
-                .height(100.dp)
-
-                .offset(y = (-100).dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-            colors = CardDefaults.cardColors(
-                containerColor = PureWhite
-            )
-
-        ) {
+            // Boks 1
             Row(
-                modifier = Modifier.padding(24.dp),
-
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = "1",
-                    style = MaterialTheme.typography.bodyLarge
+                Image(
+                    painter = painterResource(id = R.drawable.container),
+                    contentDescription = "Container 1",
+                    modifier = Modifier
+                        .width(55.dp)
+                        .height(55.dp)
                 )
 
-            ) {
-                Row(
-                    modifier = Modifier.padding(24.dp)
+                Card(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = PureWhite)
                 ) {
-                    Text(
-                        text = "1",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-
-                    Spacer(modifier = Modifier.padding(12.dp))
-
-                    Text(
-                        text = "Find et målebånd",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(24.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Find et målebånd",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    }
                 }
             }
 
-            Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(40.dp))
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ){
-            Image(
-                painter = painterResource(id = R.drawable.container2),
-                contentDescription = "Container 2",
-                modifier = Modifier
-                    .width(165.dp)
-                    .height(165.dp)
-
-                    .offset(x = (-165).dp)
-                    .offset(y = (-95).dp)
-            )
-        }
-
-// Boks 2
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp)
-                .width(100.dp)
-                .height(100.dp)
-
-                .offset(y = (-265).dp),
-
-
-            shape = RoundedCornerShape(16.dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = PureWhite
+            // Boks 2
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.container2),
+                    contentDescription = "Container 2",
+                    modifier = Modifier
+                        .width(55.dp)
+                        .height(55.dp)
                 )
 
-            ) {
-                Row(
-                    modifier = Modifier.padding(24.dp)
+                Card(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = PureWhite)
                 ) {
-                    Text(
-                        text = "2",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                    Spacer(modifier = Modifier.padding(12.dp))
-
-                    Text(
-                        text = "Tag din bedst siddende BH på",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(24.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Tag din bedst siddende BH på",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    }
                 }
             }
 
-            Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(40.dp))
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ){
-            Image(
-                painter = painterResource(id = R.drawable.container3),
-                contentDescription = "Container 3",
-                modifier = Modifier
-                    .width(165.dp)
-                    .height(165.dp)
-
-                    .offset(x = (-40).dp)
-            )
-        }
-
-// Boks 3
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 60.dp)
-                .width(100.dp)
-                .height(100.dp)
-
-                .offset(x = (-60).dp),
-
-            shape = RoundedCornerShape(16.dp),
-
-                shape = RoundedCornerShape(16.dp),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = PureWhite
+            // Boks 3
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.container3),
+                    contentDescription = "Container 3",
+                    modifier = Modifier
+                        .width(55.dp)
+                        .height(55.dp)
                 )
 
-            ) {
-                Row(
-                    modifier = Modifier.padding(24.dp)
+                Card(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = PureWhite)
                 ) {
-                    Text(
-                        text = "3",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                    Spacer(modifier = Modifier.padding(12.dp))
-
-                    Text(
-                        text = "Vi guider dig igennem måleprocessen",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(24.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Skræddersyet og klar",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    }
                 }
             }
-            Spacer(modifier = Modifier.weight(1f))
-
-            // Vores knap fra vores component "Button.kt"
-            EveryClickButton(
-                text = "Start måling",
-                onClick = onNextClick,
-
-                modifier = Modifier
-                    .width(200.dp)
-                    .height(65.dp)
-            )
         }
-
-        BackButton(
-            onClick = onBackClick,
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(start = 24.dp, top = 48.dp)
-        )
     }
 }
-
-         */
