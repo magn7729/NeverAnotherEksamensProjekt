@@ -2,6 +2,7 @@ package com.example.neveranothereksamensprojekt.view.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -20,11 +21,13 @@ import com.example.neveranothereksamensprojekt.navigation.Screen
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
+import com.example.neveranothereksamensprojekt.view.components.BackButton
 
 
 @Composable
 fun MeasurementsScreen(
-    onNextClick: () -> Unit
+    onNextClick: () -> Unit,
+    onBackClick: () -> Unit
 ) {
     DefaultFlowScreen(
         buttonText = "Fortsæt",
@@ -48,8 +51,45 @@ fun MeasurementsScreen(
                 ),
                 color = Color.Black
             )
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ) {
+
+        // Column placerer elementerne lodret under hinanden
+        Column(
+            modifier = Modifier
+                // Gør at layoutet fylder hele skærmen
+                .fillMaxSize()
+
+                // Giver luft rundt om indholdet
+                .padding(24.dp),
+
+            // Centrerer indholdet vandret
+            horizontalAlignment = Alignment.CenterHorizontally,
+
+            // Centrerer indholdet lodret
+            verticalArrangement = Arrangement.Center
+        ) {
+
+            // Simpel tekst, så vi kan se hvilken screen vi er på
+            Text(text = "Measurement Screen")
+
+            // Simpel knap, der sender brugeren videre til næste screen
+            Button(
+                onClick = onNextClick,
+                modifier = Modifier.padding(top = 24.dp)
+            ) {
+                Text(text = "Inden du går i gang")
+            }
         }
+        BackButton(
+            onClick = onBackClick,
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(start = 24.dp, top = 48.dp)
+        )
     }
 
 
     }
+}
