@@ -10,5 +10,6 @@ import androidx.lifecycle.ViewModel
 
 class BraViewModel : ViewModel() {
 
+    // State skal være her
 
 }
