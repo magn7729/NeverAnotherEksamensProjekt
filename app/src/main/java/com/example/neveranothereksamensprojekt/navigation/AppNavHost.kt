@@ -40,8 +40,13 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             Introscreen(
                 onNextClick = {
                     navController.navigate(Screen.Measurements.route)
+                },
+                onBackClick = {
+                    navController.popBackStack()
                 }
+
             )
+
         }
     // Denne route viser MeasurementsScreen
     // Når brugeren trykker videre, navigeres der til Result-screen
@@ -49,6 +54,9 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             MeasurementsScreen(
                 onNextClick = {
                     navController.navigate(Screen.Result.route)
+                },
+                onBackClick = {
+                    navController.popBackStack()
                 }
             )
         }
@@ -58,6 +66,9 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             ResultScreen(
                 onNextClick = {
                     navController.navigate(Screen.Checkout.route)
+                },
+                onBackClick = {
+                    navController.popBackStack()
                 }
             )
         }
@@ -67,6 +78,10 @@ fun AppNavHost( // NavControlleren kommer fra MainActivity
             CheckoutScreen(
                 onNextClick = {
                     navController.navigate(Screen.Confirmation.route)
+                },
+                onBackClick = {
+                    navController.popBackStack()
+
                 }
             )
         }
