@@ -29,9 +29,7 @@ fun DefaultFlowScreen(
             .fillMaxSize()
             .background(BeigeBackground)
     ) {
-
-        // Alt unikt indhold fra den enkelte screen bliver placeret her.
-
+        content()
 
         AppLogo(                    //Standardplacering af logo
             modifier = Modifier
