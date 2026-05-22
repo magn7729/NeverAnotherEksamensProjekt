@@ -19,6 +19,7 @@ fun DefaultFlowScreen(
     buttonText: String,
     onButtonClick: () -> Unit,
     modifier: Modifier = Modifier,
+    showLogo: Boolean = true,
     showBackButton: Boolean = true,
     onBackClick: (() -> Unit)? = null, // Hvad betyder det?
     content: @Composable BoxScope.() -> Unit // Hvad betyder det?
