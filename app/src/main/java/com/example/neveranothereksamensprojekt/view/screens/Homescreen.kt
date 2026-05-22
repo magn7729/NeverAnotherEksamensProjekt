@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
+import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 
 // Oliver
@@ -31,6 +32,14 @@ import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 fun Homescreen(
     onNextClick: () -> Unit
 ) {
+
+    DefaultFlowScreen(
+        buttonText = "Kom igang",
+        onButtonClick = onNextClick,
+        showLogo = false
+    ) {
+
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -101,4 +110,5 @@ fun Homescreen(
         }
 
     }
+}
 }
