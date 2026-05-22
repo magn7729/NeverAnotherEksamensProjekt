@@ -68,7 +68,7 @@ fun MeasurementsScreen(
         Column(
             modifier = Modifier.padding(top = 250.dp)
         ) {
-
+// Midlertidig for at tjek om ViewModel virker og at tekst bliver printet
             MeasurementSlider(
                 label = "Øvre Omkreds",
                 sliderPosition = viewModel.upperCircumference,

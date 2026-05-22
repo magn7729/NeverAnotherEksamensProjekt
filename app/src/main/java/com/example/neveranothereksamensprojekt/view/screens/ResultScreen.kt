@@ -33,9 +33,14 @@ import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.ui.theme.OrangePrimary
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
+import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
+import com.example.neveranothereksamensprojekt.view.components.BackButton
+import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
+
 
 @Composable
 fun ResultScreen(
+    viewModel: BraViewModel,
     onNextClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
@@ -51,6 +56,10 @@ fun ResultScreen(
                 .align(Alignment.TopStart)
                 .padding(start = 24.dp, top = 160.dp, end = 24.dp)
         ) {
+            Text(
+                text = "Alle mål er angivet i centimeter (cm)",
+                style = MaterialTheme.typography.titleLarge.copy(
+                    fontSize = 22.sp,
 
             Image(
                 painter = painterResource(
@@ -71,6 +80,34 @@ fun ResultScreen(
                 style = MaterialTheme.typography.titleMedium,
                 color = Color.Black
             )
+
+            Text(
+                text = "Øvre omkreds: ${viewModel.upperCircumference.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Nedre omkreds: ${viewModel.lowerCircumference.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Bryst bredde: ${viewModel.breastWidth.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Bryst højde: ${viewModel.breastHeight.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Box(
+                modifier = Modifier.fillMaxSize()
+            ) {
 
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -106,4 +143,7 @@ fun ResultScreen(
             }
         }
     }
+}
+
+
 }
