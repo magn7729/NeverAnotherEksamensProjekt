@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModel
 
 // ViewModel holder på appens state og logik.
 
+// Målingerne gemmes her så de kan bruges på tværs af forskellige screens
+// MutableFloatStateOf gør værdiernes observerbare for Compose
+// Når en værdi ændres, kan UI automatisk opdateres
 class BraViewModel : ViewModel() {
     var upperCircumference by mutableFloatStateOf(100f)
 

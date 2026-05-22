@@ -69,6 +69,8 @@ fun AppNavHost(
         }
         // Denne route viser ResultScreen
         // Når brugere trykker videre, navigeres der til Checkout-Screen
+        // Sender den eksisterende BraViewModel videre til ResultScreen
+        // ResultScreen får dermed adgang til de samme data, som tidligere blev indtastet på MeasurementsScreen.
         composable(Screen.Result.route) {
             ResultScreen(
                 viewModel = braViewModel,

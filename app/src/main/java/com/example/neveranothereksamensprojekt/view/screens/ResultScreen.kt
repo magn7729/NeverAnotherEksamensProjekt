@@ -36,12 +36,12 @@ import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
 @Composable
 fun ResultScreen(
-    viewModel: BraViewModel,
-    onNextClick: () -> Unit,
-    onBackClick: () -> Unit
+    viewModel: BraViewModel, // Modtager vores fælles ViewModel som indeholder brugerens indtastede mål
+    onNextClick: () -> Unit, // Lambda funktion til navigation til næste screen
+    onBackClick: () -> Unit // Lambda funktion til navigation tilbage
 ) {
-    var selectedColor by remember { mutableStateOf("black") }
-
+    var selectedColor by remember { mutableStateOf("black") } // State som holder styr på den valgte BH farve
+                        // remember sørger for at værdien bevares ved recomposition
     DefaultFlowScreen(
         buttonText = "Læg i kurv",
         onButtonClick = onNextClick,
@@ -56,7 +56,7 @@ fun ResultScreen(
                 text = "Alle mål er angivet i centimeter (cm)",
                 style = MaterialTheme.typography.titleLarge.copy(fontSize = 22.sp)
             )
-
+// Viser BH billede baseret på den valgte farve
             Image(
                 painter = painterResource(
                     id = if (selectedColor == "black") R.drawable.blackbra else R.drawable.whitebra
@@ -70,10 +70,17 @@ fun ResultScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            Text(text = "Øvre omkreds: ${viewModel.upperCircumference.toInt()} cm", color = Color.Black)
-            Text(text = "Nedre omkreds: ${viewModel.lowerCircumference.toInt()} cm", color = Color.Black)
-            Text(text = "Bryst bredde: ${viewModel.breastWidth.toInt()} cm", color = Color.Black)
-            Text(text = "Bryst højde: ${viewModel.breastHeight.toInt()} cm", color = Color.Black)
+            // Henter den gemte værdi fra ViewModel
+            // ResultScreen fungerer som præsentationslag
+            // og viser de data, som tidligere blev indtastet
+            Text(text = "Øvre omkreds: ${viewModel.upperCircumference.toInt()} cm",
+                color = Color.Black)
+            Text(text = "Nedre omkreds: ${viewModel.lowerCircumference.toInt()} cm",
+                color = Color.Black)
+            Text(text = "Bryst bredde: ${viewModel.breastWidth.toInt()} cm",
+                color = Color.Black)
+            Text(text = "Bryst højde: ${viewModel.breastHeight.toInt()} cm",
+                color = Color.Black)
 
             Spacer(modifier = Modifier.height(24.dp))
 
@@ -82,6 +89,8 @@ fun ResultScreen(
             Spacer(modifier = Modifier.height(12.dp))
 
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+
+                // Sort farvevalg
                 Box(
                     modifier = Modifier
                         .size(48.dp)
@@ -94,7 +103,7 @@ fun ResultScreen(
                             else Modifier
                         )
                 )
-
+                // Hvid farvevalg
                 Box(
                     modifier = Modifier
                         .size(48.dp)

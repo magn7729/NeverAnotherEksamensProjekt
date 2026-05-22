@@ -73,7 +73,8 @@ fun MeasurementsScreen(
                 label = "Øvre Omkreds",
                 sliderPosition = viewModel.upperCircumference,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateUpperCircumference(newValue)
+                    viewModel.updateUpperCircumference(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                                                                 // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
@@ -82,7 +83,8 @@ fun MeasurementsScreen(
                 label = "Nedre Omkreds",
                 sliderPosition = viewModel.lowerCircumference,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateLowerCircumference(newValue)
+                    viewModel.updateLowerCircumference(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                                                                 // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
@@ -91,7 +93,8 @@ fun MeasurementsScreen(
                 label = "Bryst højde",
                 sliderPosition = viewModel.breastWidth,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateBreastWidth(newValue)
+                    viewModel.updateBreastWidth(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                                                          // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
@@ -100,7 +103,8 @@ fun MeasurementsScreen(
                 label = "Nedre Omkreds",
                 sliderPosition = viewModel.breastHeight,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateBreastHeight(newValue)
+                    viewModel.updateBreastHeight(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                                                           // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
