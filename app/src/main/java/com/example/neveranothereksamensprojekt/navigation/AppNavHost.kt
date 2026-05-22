@@ -96,11 +96,14 @@ fun AppNavHost(
 
         composable(Screen.Confirmation.route) {
             ConfirmationScreen(
-                onBackClick = {
-                    navController.popBackStack()
+                onHomeClick = { // Når brugeren trykker på knappen kører den
+                    navController.navigate(Screen.Home.route) { // Navigere til home screen
+                        popUpTo(Screen.Home.route) { // Rydder stakken af "kort" inkl den forrige hjemmeskærm
+                            inclusive = true // Tager også den forrige home screen med
+                        }
+                    }
                 }
             )
-
         }
     }
 }

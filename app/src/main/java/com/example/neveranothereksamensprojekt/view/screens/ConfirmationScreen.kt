@@ -1,47 +1,73 @@
 package com.example.neveranothereksamensprojekt.view.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.neveranothereksamensprojekt.R
+import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 
 // SKAL SLETTES DET ER UDELUKKENDE TIL TEST AF NAVIGATION
 
 @Composable
 fun ConfirmationScreen(
-    onBackClick: () -> Unit
+    onHomeClick: () -> Unit
 ) {
-    // Column placerer elementerne lodret under hinanden
-    Column(
-        modifier = Modifier
-            // Gør at layoutet fylder hele skærmen
-            .fillMaxSize()
-
-            // Giver luft rundt om indholdet
-            .padding(24.dp),
-
-        // Centrerer indholdet vandret
-        horizontalAlignment = Alignment.CenterHorizontally,
-
-        // Centrerer indholdet lodret
-        verticalArrangement = Arrangement.Center
+    DefaultFlowScreen(
+        buttonText = "Tilbage til start",
+        onButtonClick = onHomeClick,
+        showLogo = true,
+        showBackButton = false,
     ) {
+        // Column placerer elementerne lodret under hinanden
+        Column(
+            modifier = Modifier
+                // Gør at layoutet fylder hele skærmen
+                .fillMaxSize()
 
-        // Simpel tekst, så vi kan se hvilken screen vi er på
-        Text(text = "Confirmation screen")
+                // Giver luft rundt om indholdet
+                .padding(24.dp),
 
-        // Simpel knap, der sender brugeren videre til næste screen
-        Button(
-            onClick = onBackClick,
-            modifier = Modifier.padding(top = 24.dp)
+            // Centrerer indholdet vandret
+            horizontalAlignment = Alignment.CenterHorizontally,
+
+            // Centrerer indholdet lodret
+            verticalArrangement = Arrangement.Center
         ) {
-            Text(text = "Kom i gang")
+            Image(
+                painter = painterResource(id = R.drawable.confirmationsscreen_model),
+                contentDescription = "Model med hvid BH på",
+                modifier = Modifier
+                    .width(280.dp)
+                    .height(340.dp),
+                contentScale = ContentScale.Crop // Sikrer at hele billedet vises
+            )
+
+            Spacer(modifier = Modifier.height(56.dp))
+
+            // Simpel tekst, så vi kan se hvilken screen vi er på
+            Text(
+                text = "Din BH er på vej!",
+                fontSize = 42.sp,
+                color = Color.Black,
+                modifier = Modifier.padding(bottom = 20.dp)
+            )
         }
     }
 }
