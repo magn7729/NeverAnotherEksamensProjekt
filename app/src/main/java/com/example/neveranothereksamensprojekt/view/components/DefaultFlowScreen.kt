@@ -34,12 +34,14 @@ fun DefaultFlowScreen(
     ) {
         content()
 
-        AppLogo(                    //Standardplacering af logo
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .padding(top = 80.dp)
-                .width(320.dp)
-        )
+        if (showLogo) { // Standard placering af logo undtagen hvis andet er angivet
+            AppLogo(
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .padding(top = 80.dp)
+                    .width(320.dp)
+            )
+        }
 
         if (showBackButton && onBackClick != null) {
             BackButton(
@@ -56,9 +58,6 @@ fun DefaultFlowScreen(
             onClick = onButtonClick,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 72.dp)
-                .width(200.dp)
-                .height(65.dp)
         )
     }
 

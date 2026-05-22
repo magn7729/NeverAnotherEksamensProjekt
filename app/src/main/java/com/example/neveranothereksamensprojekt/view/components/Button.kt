@@ -1,5 +1,8 @@
 package com.example.neveranothereksamensprojekt.view.components
 
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.material3.Button
@@ -22,11 +25,14 @@ fun EveryClickButton(
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.
+        padding(bottom = 72.dp)
+        .width(180.dp)
+        .height(45.dp),
         shape = RoundedCornerShape(8.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = OrangePrimary,
-            contentColor = PureWhite
+            contentColor = PureWhite,
         )
     ) {
         Text(

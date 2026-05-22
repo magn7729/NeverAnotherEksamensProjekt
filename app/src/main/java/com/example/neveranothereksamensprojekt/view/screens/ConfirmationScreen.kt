@@ -36,7 +36,7 @@ fun ConfirmationScreen(
     DefaultFlowScreen(
         buttonText = "Tilbage til start",
         onButtonClick = onHomeClick,
-        showLogo = true,
+        showLogo = false,
         showBackButton = false,
         backgroundColor = backgroundColor
     ) {
@@ -47,7 +47,7 @@ fun ConfirmationScreen(
                 .fillMaxSize()
 
                 // Giver luft rundt om indholdet
-                .padding(24.dp),
+                .padding(12.dp),
 
             // Centrerer indholdet vandret
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -64,15 +64,38 @@ fun ConfirmationScreen(
                 contentScale = ContentScale.Crop // Sikrer at hele billedet vises
             )
 
-            Spacer(modifier = Modifier.height(56.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
-            // Simpel tekst, så vi kan se hvilken screen vi er på
+            Text(
+                text = "Glæd dig!",
+                fontSize = 42.sp,
+                color = Color.Black,
+                modifier = Modifier.padding(bottom = 20.dp)
+            )
+
             Text(
                 text = "Din BH er på vej!",
                 fontSize = 42.sp,
                 color = Color.Black,
                 modifier = Modifier.padding(bottom = 20.dp)
             )
+
+
+            Image(
+                painter = painterResource(id = R.drawable.process),
+                contentDescription = "Hvor langt skræddersyningen er nået i processen",
+                modifier = Modifier
+                    .width(340.dp)
+                    .height(180.dp),
+                contentScale = ContentScale.Fit // Sikrer at hele billedet vises
+            )
+
+
+
+            Spacer(modifier = Modifier.height(56.dp))
+
+            // Simpel tekst, så vi kan se hvilken screen vi er på
+
         }
     }
 }
