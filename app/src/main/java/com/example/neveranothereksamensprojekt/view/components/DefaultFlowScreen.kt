@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 
 @Composable
@@ -19,6 +20,7 @@ fun DefaultFlowScreen(
     buttonText: String,
     onButtonClick: () -> Unit,
     modifier: Modifier = Modifier,
+    backgroundColor: Color = BeigeBackground,
     showLogo: Boolean = true,
     showBackButton: Boolean = true,
     onBackClick: (() -> Unit)? = null, // Hvad betyder det?
@@ -28,7 +30,7 @@ fun DefaultFlowScreen(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(BeigeBackground)
+            .background(backgroundColor)
     ) {
         content()
 
