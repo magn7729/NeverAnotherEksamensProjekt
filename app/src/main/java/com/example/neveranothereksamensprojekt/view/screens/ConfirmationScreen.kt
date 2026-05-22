@@ -22,18 +22,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
+import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
+
 
 // SKAL SLETTES DET ER UDELUKKENDE TIL TEST AF NAVIGATION
 
 @Composable
 fun ConfirmationScreen(
-    onHomeClick: () -> Unit
+    onHomeClick: () -> Unit,
+    backgroundColor: Color = PureWhite
+
 ) {
     DefaultFlowScreen(
         buttonText = "Tilbage til start",
         onButtonClick = onHomeClick,
         showLogo = true,
         showBackButton = false,
+        backgroundColor = backgroundColor
     ) {
         // Column placerer elementerne lodret under hinanden
         Column(
