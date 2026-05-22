@@ -22,10 +22,12 @@ import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
 import com.example.neveranothereksamensprojekt.view.components.BackButton
+import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
 
 @Composable
 fun ResultScreen(
+    viewModel: BraViewModel,
     onNextClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
@@ -46,12 +48,37 @@ fun ResultScreen(
 
         ) {
             Text(
-                text = "Resultatside",
+                text = "Alle mål er angivet i centimeter (cm)",
                 style = MaterialTheme.typography.titleLarge.copy(
-                    fontSize = 46.sp,
+                    fontSize = 22.sp,
                 ),
                 color = Color.Black
             )
+
+            Text(
+                text = "Øvre omkreds: ${viewModel.upperCircumference.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Nedre omkreds: ${viewModel.lowerCircumference.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Bryst bredde: ${viewModel.breastWidth.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
+            Text(
+                text = "Bryst højde: ${viewModel.breastHeight.toInt()} cm",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+
             Box(
                 modifier = Modifier.fillMaxSize()
             ) {
@@ -61,3 +88,5 @@ fun ResultScreen(
         }
     }
 }
+
+

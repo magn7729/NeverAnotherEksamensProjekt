@@ -71,6 +71,7 @@ fun AppNavHost(
         // Når brugere trykker videre, navigeres der til Checkout-Screen
         composable(Screen.Result.route) {
             ResultScreen(
+                viewModel = braViewModel,
                 onNextClick = {
                     navController.navigate(Screen.Checkout.route)
                 },
