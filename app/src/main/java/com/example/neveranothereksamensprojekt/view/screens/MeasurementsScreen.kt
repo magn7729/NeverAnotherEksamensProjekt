@@ -58,24 +58,20 @@ fun MeasurementsScreen(
                 color = Color.Black
             )
 
-            // Sliders skal tilføjes her
-
-
-
 
         }
 
         Column(
             modifier = Modifier.padding(top = 250.dp)
         ) {
-// Midlertidig for at tjek om ViewModel virker og at tekst bliver printet
             MeasurementSlider(
                 label = "Øvre Omkreds",
                 sliderPosition = viewModel.upperCircumference,
                 onSliderPositionChange = { newValue ->
                     viewModel.updateUpperCircumference(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
-                                                                 // Data gemmes derfor og bevares selv når brugeren navigerer videre.
-
+                },
+                onGuideClick =  {                             // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    // Her skal guide screenen være
                 }
             )
 
@@ -84,27 +80,34 @@ fun MeasurementsScreen(
                 sliderPosition = viewModel.lowerCircumference,
                 onSliderPositionChange = { newValue ->
                     viewModel.updateLowerCircumference(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
-                                                                 // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                },
+                onGuideClick =  {                             // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    // Her skal guide screenen være
+                                                           // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
 
             MeasurementSlider(
                 label = "Bryst højde",
-                sliderPosition = viewModel.breastWidth,
+                sliderPosition = viewModel.breastHeight,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateBreastWidth(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
-                                                          // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    viewModel.updateBreastHeight(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                },
+                onGuideClick =  {                             // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    // Her skal guide screenen være                                   // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
 
             MeasurementSlider(
                 label = "Nedre Omkreds",
-                sliderPosition = viewModel.breastHeight,
+                sliderPosition = viewModel.breastWidth,
                 onSliderPositionChange = { newValue ->
-                    viewModel.updateBreastHeight(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
-                                                           // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    viewModel.updateBreastWidth(newValue) // Når brugeren ændre slideren opdateres værdien i ViewModel
+                },
+                onGuideClick =  {                             // Data gemmes derfor og bevares selv når brugeren navigerer videre.
+                    // Her skal guide screenen være                                     // Data gemmes derfor og bevares selv når brugeren navigerer videre.
 
                 }
             )
