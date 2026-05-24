@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.neveranothereksamensprojekt.view.screens.CheckoutScreen
 import com.example.neveranothereksamensprojekt.view.screens.ConfirmationScreen
+import com.example.neveranothereksamensprojekt.view.screens.GuideScreen
 import com.example.neveranothereksamensprojekt.view.screens.Homescreen
 import com.example.neveranothereksamensprojekt.view.screens.Introscreen
 import com.example.neveranothereksamensprojekt.view.screens.MeasurementsScreen
@@ -56,6 +57,8 @@ fun AppNavHost(
         }
         // Denne route viser MeasurementsScreen
         // Når brugeren trykker videre, navigeres der til Result-screen
+        // Når brugeren trykker på "se guide her knappen"
+
         composable(Screen.Measurements.route) {
             MeasurementsScreen(
                 viewModel = braViewModel,
@@ -64,6 +67,9 @@ fun AppNavHost(
                 },
                 onBackClick = {
                     navController.popBackStack()
+                },
+                onGuideClick = { index ->
+                    navController.navigate("guide/$index") // Navigerer til guide med det rigtige index
                 }
             )
         }
@@ -105,6 +111,17 @@ fun AppNavHost(
                         }
                     }
                 }
+            )
+        }
+
+        // Denne route viser GuideScreen
+        // index bestemmer hvilken guide der vises (0-3)
+        composable("guide/{index}") { backStackEntry ->
+            val index = backStackEntry.arguments?.getString("index")?.toInt() ?: 0
+            val guide = braViewModel.visuelGuides[index]
+            GuideScreen(
+                guide = guide,
+                onBackClick = { navController.popBackStack() }
             )
         }
     }
