@@ -35,6 +35,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import com.example.neveranothereksamensprojekt.model.MeasurementGuide
 import com.example.neveranothereksamensprojekt.ui.theme.OrangePrimary
+import com.example.neveranothereksamensprojekt.ui.theme.BeigeHighlight
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 
 @Composable
@@ -117,7 +118,7 @@ fun TabButton(text: String, selected: Boolean, onClick: () -> Unit) {
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(if (selected) OrangePrimary else Color.Transparent)
+            .background(if (selected) OrangePrimary else BeigeHighlight)
             .clickable { onClick() }
             .padding(horizontal = 68.dp, vertical = 10.dp)
     ) {
