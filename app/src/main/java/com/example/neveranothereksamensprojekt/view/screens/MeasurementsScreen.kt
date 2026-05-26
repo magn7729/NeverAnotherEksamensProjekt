@@ -47,7 +47,8 @@ fun MeasurementsScreen(
                     viewModel.updateUpperCircumference(newValue) // Når brugeren ændrer slideren opdateres værdien i ViewModel
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
-                onGuideClick = { onGuideClick(0) } // Navigerer til guide for Øvre Omkreds
+                onGuideClick = { onGuideClick(0) }, // Navigerer til guide for Øvre Omkreds
+                valueRange = 70f..120f
             )
 
             MeasurementSlider(
@@ -57,7 +58,8 @@ fun MeasurementsScreen(
                     viewModel.updateLowerCircumference(newValue) // Når brugeren ændrer slideren opdateres værdien i ViewModel
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
-                onGuideClick = { onGuideClick(1) } // Navigerer til guide for Nedre Omkreds
+                onGuideClick = { onGuideClick(1) }, // Navigerer til guide for Nedre Omkreds
+                valueRange = 60f..100f
             )
 
             MeasurementSlider(
@@ -67,7 +69,8 @@ fun MeasurementsScreen(
                     viewModel.updateBreastWidth(newValue) // Når brugeren ændrer slideren opdateres værdien i ViewModel
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
-                onGuideClick = { onGuideClick(2) } // Navigerer til guide for Brystvidde
+                onGuideClick = { onGuideClick(2) }, // Navigerer til guide for Brystvidde
+                valueRange = 0f..50f
             )
 
             MeasurementSlider(
@@ -77,7 +80,8 @@ fun MeasurementsScreen(
                     viewModel.updateBreastHeight(newValue) // Når brugeren ændrer slideren opdateres værdien i ViewModel
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
-                onGuideClick = { onGuideClick(3) } // Navigerer til guide for Brysthøjde
+                onGuideClick = { onGuideClick(3) }, // Navigerer til guide for Brysthøjde
+                valueRange = 0f..50f
             )
         }
     }

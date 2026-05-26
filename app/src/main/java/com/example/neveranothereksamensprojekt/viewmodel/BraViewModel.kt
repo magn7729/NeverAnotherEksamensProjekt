@@ -16,13 +16,13 @@ import com.example.neveranothereksamensprojekt.model.MeasurementGuide
 // MutableFloatStateOf gør værdiernes observerbare for Compose
 // Når en værdi ændres, kan UI automatisk opdateres
 class BraViewModel : ViewModel() {
-    var upperCircumference by mutableFloatStateOf(100f)
+    var upperCircumference by mutableFloatStateOf(95f)
 
-    var lowerCircumference by mutableFloatStateOf(100f)
+    var lowerCircumference by mutableFloatStateOf(80f)
 
-    var breastHeight by mutableFloatStateOf(100f)
+    var breastHeight by mutableFloatStateOf(25f)
 
-    var breastWidth by mutableFloatStateOf(100f)
+    var breastWidth by mutableFloatStateOf(25f)
 
 
 
@@ -48,11 +48,11 @@ class BraViewModel : ViewModel() {
 
     val visuelGuides = listOf(
         MeasurementGuide(
-            title = "Øvre omkreds",
-            description = "Placér målebåndet rundt om kroppen over brystets fyldigste punkt.",
-            imageRes = R.drawable.oevreomkreds,
-            tip = "Målebåndet skal ligge tæt, men ikke stramme.",
-            videoRes = R.raw.oevreomkredsvideo
+                title = "Øvre omkreds",
+                description = "Placér målebåndet rundt om kroppen over brystets fyldigste punkt.",
+                imageRes = R.drawable.oevreomkreds,
+                tip = "Målebåndet skal ligge tæt, men ikke stramme.",
+                videoRes = R.raw.oevreomkredsvideo
         ),
         MeasurementGuide(
             title = "Nedre omkreds",

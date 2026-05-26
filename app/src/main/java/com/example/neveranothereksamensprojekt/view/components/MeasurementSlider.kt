@@ -39,7 +39,8 @@ fun MeasurementSlider(
     label: String,
     sliderPosition: Float,
     onSliderPositionChange: (Float) -> Unit,
-    onGuideClick: () -> Unit
+    onGuideClick: () -> Unit,
+    valueRange: ClosedFloatingPointRange<Float> = 0f..113f
 ) {
 
     Box(
@@ -74,7 +75,7 @@ fun MeasurementSlider(
                         value = sliderPosition.roundToInt().toString(),
                         onValueChange = { input ->
                             input.toFloatOrNull()?.let { newValue ->
-                                if (newValue in 0f..200f) {
+                                if (newValue in valueRange) {
                                     onSliderPositionChange(newValue)
                                 }
                             }
@@ -109,7 +110,7 @@ fun MeasurementSlider(
                     onSliderPositionChange(it.roundToInt().toFloat())
                 },
 
-                valueRange = 0f..200f,
+                valueRange = valueRange,
                 colors = SliderDefaults.colors(
                     thumbColor = PureWhite,
                     activeTrackColor = OrangePrimary,
