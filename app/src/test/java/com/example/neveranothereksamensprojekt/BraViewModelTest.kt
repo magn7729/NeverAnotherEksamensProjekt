@@ -16,7 +16,7 @@ class BraViewModelTest {
     fun `does updateUpperCircumference update the Value`() {
         val viewModel = BraViewModel()
         viewModel.updateUpperCircumference(70f) // Vi opdaterer værdien
-        assertEquals(70f, viewModel.upperCircumference) // tjekker om værdien faktisk bliver opdateret
+        assertEquals(70f, viewModel.upperCircumference)  // tjekker om værdien faktisk bliver opdateret
     }
 
 
@@ -26,6 +26,7 @@ class BraViewModelTest {
         viewModel.updateLowerCircumference(80f)  // Vi opdaterer værdien
         assertEquals(80f, viewModel.lowerCircumference // tjekker om værdien faktisk bliver opdateret
         )
+
     }
 }
 
