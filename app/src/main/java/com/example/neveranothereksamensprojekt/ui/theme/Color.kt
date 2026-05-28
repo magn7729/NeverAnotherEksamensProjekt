@@ -2,6 +2,8 @@ package com.example.neveranothereksamensprojekt.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+//Mathilde
+
 // 🟠 Primary brand color (knapper)
 val OrangePrimary = Color(0xFFFF5F00)
 

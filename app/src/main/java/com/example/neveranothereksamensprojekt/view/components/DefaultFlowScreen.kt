@@ -15,6 +15,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import com.example.neveranothereksamensprojekt.ui.theme.BeigeBackground
 
+// Oliver, Gustav
+
 @Composable
 fun DefaultFlowScreen(
     buttonText: String,
@@ -53,7 +55,7 @@ fun DefaultFlowScreen(
         }
 
 
-        EveryClickButton(          //Standardplacering af knap i bunden
+        OrangeDefaultButton(          //Standardplacering af knap i bunden
             text = buttonText,
             onClick = onButtonClick,
             modifier = Modifier

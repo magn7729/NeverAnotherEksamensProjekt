@@ -14,6 +14,8 @@ import com.example.neveranothereksamensprojekt.view.screens.MeasurementsScreen
 import com.example.neveranothereksamensprojekt.view.screens.ResultScreen
 import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
+// Oliver, Magnus, Mathilde og Gustav
+
 // AppNavHost styrer navigationen mellem appens forskellige screens
 // Den bestemmer hvilke sider der skal findes i appen og hvilken side der skal vises først
 @Composable

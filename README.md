@@ -4,7 +4,8 @@ Dette GitHub-repository er en Android-applikation udviklet som en del af eksamen
 
 ## Demo
 
-Screenshot eller link.
+Youtube link til demo af APP
+<https://youtu.be/Ta9dOVx39Cg>
 
 ## Features
 

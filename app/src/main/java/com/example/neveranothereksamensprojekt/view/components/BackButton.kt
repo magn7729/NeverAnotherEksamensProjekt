@@ -11,9 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
-// Her skal der laves en component til en "tilbage" knap
-
-// Den er lavet - Gustav
+// Gustav
 
 @Composable
 fun BackButton(

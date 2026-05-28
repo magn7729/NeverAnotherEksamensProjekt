@@ -8,9 +8,7 @@ import androidx.lifecycle.ViewModel
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.model.MeasurementGuide
 
-//Viewmodel test
-
-// ViewModel holder på appens state og logik.
+//Mathilde, Gustav, Oliver og Magnus
 
 // Målingerne gemmes her så de kan bruges på tværs af forskellige screens
 // MutableFloatStateOf gør værdiernes observerbare for Compose

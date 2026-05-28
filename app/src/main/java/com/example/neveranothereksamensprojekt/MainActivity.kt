@@ -15,6 +15,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.neveranothereksamensprojekt.navigation.AppNavHost
 import com.example.neveranothereksamensprojekt.ui.theme.NeverAnotherEksamensProjektTheme
 
+//Oliver, Gustav, Mathilde og Magnus
+
 // MainActivity er appens startpunkt
 class MainActivity : ComponentActivity() {
     // onCreate bliver kaldt når activity'en bliver oprettet.

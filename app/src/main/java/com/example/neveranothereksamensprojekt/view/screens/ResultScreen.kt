@@ -36,6 +36,8 @@ import com.example.neveranothereksamensprojekt.ui.theme.OrangePrimary
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
+//Magnus og Mathilde
+
 @Composable
 fun ResultScreen(
     viewModel: BraViewModel, // Modtager vores fælles ViewModel som indeholder brugerens indtastede mål

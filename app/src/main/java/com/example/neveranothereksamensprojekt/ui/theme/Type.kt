@@ -8,6 +8,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 
+//Mathilde
+
 val BodyFont = FontFamily(
     Font(R.font.inter_regular, FontWeight.Normal)
 )
