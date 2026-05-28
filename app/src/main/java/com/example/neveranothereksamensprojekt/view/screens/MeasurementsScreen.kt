@@ -48,7 +48,7 @@ fun MeasurementsScreen(
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
                 onGuideClick = { onGuideClick(0) }, // Navigerer til guide for Øvre Omkreds
-                valueRange = 70f..120f
+                valueRange = 77f..113f
             )
 
             MeasurementSlider(
@@ -59,7 +59,7 @@ fun MeasurementsScreen(
                     // Data gemmes og bevares selv når brugeren navigerer videre
                 },
                 onGuideClick = { onGuideClick(1) }, // Navigerer til guide for Nedre Omkreds
-                valueRange = 60f..100f
+                valueRange = 65f..100f
             )
 
             MeasurementSlider(
