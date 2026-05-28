@@ -127,7 +127,7 @@ fun ResultScreen(
     }
 }
 @Composable
-fun MeasurementCard(
+private fun MeasurementCard(
     upperCircumference: Int,
     lowerCircumference: Int,
     breastWidth: Int,
@@ -174,7 +174,7 @@ fun MeasurementCard(
 }
 
 @Composable
-fun MeasurementRow(
+private fun MeasurementRow(
     label: String,
     value: Int
 ) {
