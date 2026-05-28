@@ -25,7 +25,7 @@ import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.ui.theme.PureWhite
 
 
-// SKAL SLETTES DET ER UDELUKKENDE TIL TEST AF NAVIGATION
+// Gustav
 
 @Composable
 fun ConfirmationScreen(

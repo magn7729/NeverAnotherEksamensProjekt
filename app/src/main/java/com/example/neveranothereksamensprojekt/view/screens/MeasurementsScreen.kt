@@ -14,6 +14,8 @@ import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 import com.example.neveranothereksamensprojekt.view.components.MeasurementSlider
 import com.example.neveranothereksamensprojekt.viewmodel.BraViewModel
 
+// Mathilde og Gustav
+
 @Composable
 fun MeasurementsScreen(
     viewModel: BraViewModel,

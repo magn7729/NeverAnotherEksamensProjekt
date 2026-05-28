@@ -24,9 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
-import com.example.neveranothereksamensprojekt.view.components.EveryClickButton
+import com.example.neveranothereksamensprojekt.view.components.OrangeDefaultButton
 
-// Oliver
+// Oliver og Gustav
 
 @Composable
 fun Homescreen(
@@ -99,7 +99,7 @@ fun Homescreen(
             Spacer(modifier = Modifier.height(80.dp))
 
 
-            EveryClickButton(           // Bruger Button.kt fra components
+            OrangeDefaultButton(           // Bruger OrangeDefaultButton.kt fra components
                 text = "Kom i gang",
                 onClick = onNextClick,
                 modifier = Modifier

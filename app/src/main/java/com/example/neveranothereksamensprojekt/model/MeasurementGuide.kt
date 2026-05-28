@@ -1,11 +1,6 @@
 package com.example.neveranothereksamensprojekt.model
 
-
-class mål (
-    var længde: Int,
-    var bredde: Int
-
-    )
+//Mathilde
 
 data class MeasurementGuide(
     val title: String,
@@ -13,5 +8,4 @@ data class MeasurementGuide(
     val imageRes: Int,
     val tip: String,
     val videoRes: Int
-
 )

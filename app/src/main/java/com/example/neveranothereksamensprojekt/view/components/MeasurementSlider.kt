@@ -33,6 +33,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.clickable
 
+//Mathilde, Oliver, Gustav og Magnus
+
+//Fået hjælp af AI og Android Developers til hvordan man laver en slider
+// https://developer.android.com/develop/ui/compose/quick-guides/content/create-range-slider?fbclid=IwY2xjawR7lvFleHRuA2FlbQIxMABicmlkETBielJQRVlQcFlRQ1Z2MkN3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgmSH_-WlbYU82WMf524fRRoUyC6oA_sRMehdAcYWV8zJEzJIY-Y5UXbnUMs_aem_Tr-SuS3J1ZTXKdK_XLedHQ
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MeasurementSlider(

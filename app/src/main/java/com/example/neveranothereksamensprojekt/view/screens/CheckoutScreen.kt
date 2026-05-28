@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.example.neveranothereksamensprojekt.R
 import com.example.neveranothereksamensprojekt.view.components.DefaultFlowScreen
 
+// Oliver
 @Composable
 fun CheckoutScreen(
     onNextClick: () -> Unit,
@@ -40,7 +41,8 @@ fun CheckoutScreen(
 ) {
     // State behøver ikke hoistes, fordi den kun bruges lokalt på CheckoutScreen.
     // Hvis checkboxens værdi senere skal bruges andre steder, kan den flyttes til ViewModel.
-    var termsAccepted by remember { mutableStateOf(false) }
+    var termsAccepted by remember { mutableStateOf(false) } // Laver en variabel hvor startværdien er false
+                                                                    // mutableStateOf betyder, at værdien kan ændre sig og at der sker recomposition i UI'et der læser den state.
 
     DefaultFlowScreen(
         buttonText = "Køb",
@@ -204,10 +206,10 @@ fun CheckoutScreen(
                     .padding(bottom = 145.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Checkbox(
+                Checkbox(                       //Checkbox kommer fra imports - vi kalder en indbygget composable funktion fra meterial3
                     checked = termsAccepted,
-                    onCheckedChange = { isChecked ->
-                        termsAccepted = isChecked
+                    onCheckedChange = { isChecked ->        // Lambda-funktion der modtager checkboxens nye Boolean-værdi og gemmer den i state, så UI’et recomposer
+                        termsAccepted = isChecked           // Når checkboxen ændres, gemmes den nye true/false-værdi i termsAccepted
                     }
                 )
 

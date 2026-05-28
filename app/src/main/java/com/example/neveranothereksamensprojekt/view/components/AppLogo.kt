@@ -8,8 +8,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import com.example.neveranothereksamensprojekt.R
 
-// Her skal der laves en component til appens logo ->
-// der ligger i toppen på side 2,3 og 4
+//Gustav
 
 @Composable
 fun AppLogo(
