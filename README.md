@@ -1,6 +1,6 @@
 # NeverAnother
 
-Kort beskrivelse af projektet.
+Dette GitHub-repository er en Android-applikation udviklet som en del af eksamensprojektet. Appen er lavet som et mere intuitivt og guidet købs- og måleflow for Never Another, hvor brugeren kan indtaste sine egne mål, få hjælp gennem måleguides og simulere en gennemførelse af et køb.
 
 ## Demo
 
@@ -8,102 +8,114 @@ Screenshot eller link.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Guidet måling
+- Sliders til indtastning af mål
+- Visuelle måleguides og videoguides
+- Dynamisk guidescreen
+- Resultatside hvor brugerens mål bliver vist
+- Mulighed for at ændre BH'ens farve direkte på resultatsiden.
+- Checkout og confirmation-flow
+- Unit-tests af centrale update-funktioner i BraViewModel
 
 ## Built With
 
 - Android Studio
 - Kotlin
+- Jetpack Compose
+- Navigation Compose
+- ViewModel
+
 
 ## Installation
 
+
+
+1. Klon repositoryet:
 ```bash
-git clone ...
-npm install
-npm run dev
+git clone https://github.com/magn7729/NeverAnotherEksamensProjekt.git
 ```
+3. Åbn projektet i Android Studio.
+4. Vent på, at Gradle syncer projektet.
+5. Vælg en emulator eller fysisk Android-enhed.
+6. Kør appen med Run i Android Studio.
+
 
 ## Architecture 
+
+Projektet er struktureret efter en MVVM-inspireret opbygning. Det betyder, at vi har forsøgt at adskille skærme, data/logik og navigation i forskellige mapper.
+
+- view indeholder appens skærme og UI-komponenter.
+- viewmodel indeholder BraViewModel, som håndterer måledata og guideindhold.
+- model indeholder datamodeller, f.eks. MeasurementGuide.
+- navigation indeholder appens navigation og routes.
 
 # Projektstruktur (MVVM)
 
 ```text
 
-com.example.app
+NeverAnotherEksamensProjekt
 
+├── app
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com.example.neveranothereksamensprojekt
+│       │   │       ├── model
+│       │   │       │   └── MeasurementGuide.kt
+│       │   │       │
+│       │   │       ├── navigation
+│       │   │       │   ├── AppNavHost.kt
+│       │   │       │   └── Screen.kt
+│       │   │       │
+│       │   │       ├── view
+│       │   │       │   ├── components
+│       │   │       │   │   ├── DefaultFlowScreen.kt
+│       │   │       │   │   └── MeasurementSlider.kt
+│       │   │       │   │
+│       │   │       │   └── screens
+│       │   │       │       ├── CheckoutScreen.kt
+│       │   │       │       ├── ConfirmationScreen.kt
+│       │   │       │       ├── GuideScreen.kt
+│       │   │       │       ├── Homescreen.kt
+│       │   │       │       ├── Introscreen.kt
+│       │   │       │       ├── MeasurementsScreen.kt
+│       │   │       │       └── ResultScreen.kt
+│       │   │       │
+│       │   │       ├── viewmodel
+│       │   │       │   └── BraViewModel.kt
+│       │   │       │
+│       │   │       └── MainActivity.kt
+│       │   │
+│       │   └── res
+│       │       ├── drawable
+│       │       ├── mipmap
+│       │       └── raw
+│       │
+│       ├── test
+│       │   └── java
+│       │       └── com.example.neveranothereksamensprojekt
+│       │           └── BraViewModelTest.kt
+│       │
+│       └── androidTest
+│           └── java
+│               └── com.example.neveranothereksamensprojekt
+│                   └── ExampleInstrumentedTest.kt
 │
-
-├── view
-
-│   │
-
-│   ├── home
-
-│   │   └── HomeScreen.kt
-
-│   │
-
-│   ├── profile
-
-│   │   └── ProfileScreen.kt
-
-│   │
-
-│   └── settings
-
-│       └── SettingsScreen.kt
-
-│
-
-├── viewmodel
-
-│   │
-
-│   ├── HomeViewModel.kt
-
-│   ├── ProfileViewModel.kt
-
-│   └── SettingsViewModel.kt
-
-│
-
-├── model
-
-│   │
-
-│   ├── User.kt
-
-│   ├── Product.kt
-
-│   │
-
-│   └── repository
-
-│       ├── UserRepository.kt
-
-│       └── ProductRepository.kt
-
-│
-
-├── navigation
-
-│   └── AppNavigation.kt
-
-│
-
-└── MainActivity.kt
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle.properties
+└── README.md
 
 ```
 
 ## Usage
 
-Forklaring på hvordan systemet bruges.
+Appen starter på forsiden og guider brugeren gennem et flow, hvor brugeren først introduceres til måleprocessen. Derefter kan brugeren indtaste sine mål på måleskærmen ved hjælp af sliders.
 
-## Project Structure
+På måleskærmen kan brugeren åbne en guide til hver måling. Guiden viser enten en visuel forklaring eller en videogennemgang. Når målene er indtastet, føres brugeren videre til resultatsiden, hvor målene vises, og hvor brugeren kan vælge farve på BH’en.
 
-Kort oversigt over mapper.
+Til sidst kan brugeren fortsætte til checkout og confirmation.
+
 
 ## Git Workflow
 
@@ -164,15 +176,16 @@ Når en udvikler arbejder på en ny funktion, fejlrettelse eller ændring, laves
 
 ## Authors
 
-- Navn
-- Navn
-- Navn
-- Navn
+- Gustav Meyer
+- Magnus Ørnhof
+- Oliver Baasch
+- Mathilde Farnø
 
 ## Future Improvements
 
-- Ting I vil tilføje senere
+- Flere unit tests
+- Ui tests
+- Mere komplet checkout og confirmation flow
+- Mulighed for at gemme brugeren valg og målinger
 
-## License
 
-MIT
