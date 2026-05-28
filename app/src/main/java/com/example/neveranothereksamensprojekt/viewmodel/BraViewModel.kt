@@ -18,7 +18,7 @@ import com.example.neveranothereksamensprojekt.model.MeasurementGuide
 class BraViewModel : ViewModel() {
     var upperCircumference by mutableFloatStateOf(95f)
 
-    var lowerCircumference by mutableFloatStateOf(80f)
+    var lowerCircumference by mutableFloatStateOf(82.5f)
 
     var breastHeight by mutableFloatStateOf(25f)
 
